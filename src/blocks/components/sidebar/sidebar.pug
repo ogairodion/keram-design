@@ -1,0 +1,42 @@
+-
+    const sidebar_menu = [
+        {
+            href: "",
+            icon: "heart",
+            text: "Избранное",
+            class: "active"
+        },
+        {
+            href: "",
+            icon: "graph",
+            text: "Сравнение"
+        },
+        {
+            href: "",
+            icon: "doc",
+            text: "Текущие заказы"
+        },
+        {
+            href: "",
+            icon: "history",
+            text: "История заказов"
+        },
+        {
+            href: "",
+            icon: "settings",
+            text: "Настройки"
+        },
+        {
+            href: "",
+            icon: "off",
+            text: "Выйти",
+            class: "exit"
+        }
+    ]
+
+.sidebar
+    each sidebar_item in sidebar_menu
+        a.sidebar__item(href=sidebar_item.href class=sidebar_item.class)
+            .sidebar__item-icon
+                +svgMono(sidebar_item.icon)
+            .sidebar__item-text= sidebar_item.text

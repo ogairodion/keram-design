@@ -1,0 +1,27 @@
+include ../products/products-data.pug
+include ../../components/product/product.pug
+
+section.catalog-category-card
+    .l-content 
+        .content 
+            include ../../components/sidebar/sidebar-filters.pug
+            .catalog-category-card__content
+                .catalog-category-card__content-top
+                    .catalog-category-card__top.page-top
+                        a.page-top__back.page-top__back--text(href="")    
+                            .page-top__back-icon  
+                                +svgMono('arrow')
+                            .page-top__back-text Коллекции плитки для ванной
+                    h1.catalog-category-card__title.title.title--h4 Плитка для ванной 
+                    a.filters__mobile(href="")
+                        +svgMono('filters-burger')
+                        .filters__mobile-count 4
+                    .catalog-category-card__content-sidebar.hidden    
+                .catalog-category-card__filters-wrapper
+                    .catalog-category-card__filters     
+                        include ../../components/filters/filters-chosen.pug
+                        include ../../components/filters/filters.pug
+                .catalog-category-card__products
+                    each product_collection in products
+                        +product(product_collection, 'tpl-1','lazy')
+                a.catalog-category-card__btn.btn.btn--black.btn--more(href="") Показать еще

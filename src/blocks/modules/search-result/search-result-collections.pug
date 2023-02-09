@@ -1,0 +1,16 @@
+include ../catalog/catalog-data.pug
+include ../../components/collection/collection.pug
+
+.search-result.search-result-collections
+    .l-default  
+        .search-result__top
+            .catalog-category-card__top.page-top
+                a.page-top__back.page-top__back--text(href="")    
+                    .page-top__back-icon  
+                        +svgMono('arrow')
+                    .page-top__back-text Все результаты поиска
+            h1.catalog-category-card__title.title.title--h4 Товары по запросу «Jum» 
+        .search-result-collections__items
+            each catalog_collection in catalog_collections
+                a.catalog-collections__item(href="")
+                    +collection(catalog_collection, '','lazy') 

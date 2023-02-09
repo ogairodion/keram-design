@@ -1,0 +1,29 @@
+.popup.popup-callback#popup-write
+    .popup-close(data-fancybox-close)
+        .popup-close__spans
+            span 
+            span 
+    .popup-content
+        .popup__title.title--popup Не нашли нужной позиции или нашли дешевле?
+        form.form.popup-form.popup-callback__form
+            .form__input
+                label Имя
+                input(type="text" name="name")
+            .form__input
+                label Контактный телефон
+                input(type="tel" name="phone") 
+            .form__input.form__textarea
+                label Раскажите покажите?
+                textarea(name="message") 
+            .form__upload   
+                input#actual-btn(type="file" accept=".doc, .pdf, .zip") 
+                .form__upload-text Загрузить документы
+                .form__upload-icon 
+                    +svgMono('download')
+            span#file-chosen
+                span#delete-file 
+                    span
+                    span
+            .form__upload-sizes DOC, PDF, ZIP до 5 MB
+            .form__submit
+                button.popup-form__btn.btn.btn--black(type="submit") Позвоните мне

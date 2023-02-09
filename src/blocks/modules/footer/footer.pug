@@ -1,0 +1,43 @@
+include footer-data.pug
+
+footer.footer   
+    .l-footer
+        .footer__top
+            .footer__items
+                each footer_item in footer_items
+                    .footer__item.dropdown
+                        .footer__item-top.dropdown-menu-top
+                            .footer__item-title= footer_item.title
+                            .footer__item-arrow.dropdown-arrow
+                                +svgMono('arrow-dropdown')
+                        - if (footer_item.list)
+                            .footer__list.dropdown-content
+                                each footer_list_item in footer_item.list
+                                    a.footer__list-item(href=footer_list_item.href)= footer_list_item.text
+                        - if (footer_item.list_top)
+                            .footer__list.dropdown-content
+                                .footer__list.footer__list--top
+                                    each footer_list_item_top in footer_item.list_top
+                                        a.footer__list-item(href=footer_list_item_top.href)= footer_list_item_top.text
+                                - if (footer_item.list_bottom)
+                                    .footer__list.footer__list--bottom
+                                        each footer_list_item_bottom in footer_item.list_top
+                                            a.footer__list-item(href=footer_list_item_bottom.href)= footer_list_item_bottom.text
+                        - if (footer_item.address)
+                            .footer__list.dropdown-content
+                                .footer__address
+                                    .footer__address-title= footer_item.address.title
+                                    a.footer__address-text(href=footer_item.address.href)= footer_item.address.text
+                                - if (footer_item.contact)
+                                    .footer__contact
+                                        .footer__contact-item Время работы салона:
+                                        .footer__contact-item Пн-вс с 9:00 до 19:00
+                                        .footer__contact-item Время работы салона:
+                                        .footer__contact-item Пн-вс с 9:00 до 19:00
+                                - if (footer_item.btn)
+                                    a.footer__btn(href=footer_item.btn.href)= footer_item.btn.text
+        .footer__bottom
+            .footer__bottom-copyrights © 2021 ООО «СТРОЙ-МАГ»
+            a.footer__bottom-politics(href="") Политика конфиденциальности
+            a.footer__logo(href="") 
+                +svgMono('logo-bakin')

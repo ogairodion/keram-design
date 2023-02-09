@@ -1,0 +1,118 @@
+-
+  const socials=[
+    {
+      img: "twitter",
+      label: "Twitter",
+      link: "#",
+    },
+    {
+      img: "instagram",
+      label: "Instagram",
+      link: "#",
+    },
+    {
+      img: "facebook",
+      label: "Facebook",
+      link: "#",
+    },
+  ];
+
+-
+  const topMenu=[
+    {
+      label: "Как купить?",
+      link: "#",
+    },
+    {
+      label: "Доставка и самовывоз",
+      link: "#",
+    },
+    {
+      label: "Возврат",
+      link: "#",
+    },
+    {
+      label: "Шоурум",
+      link: "#",
+    },
+    {
+      label: "Контакты",
+      link: "#",
+    },
+  ];
+
+header.header
+  .header__top
+    .l-default
+      .header__top-wrapper
+        nav.header__socials
+          each social in socials
+            a.header__socials-item(href=social.link, aria-label=social.label)
+              +svgMono(social.img)
+        nav.header__menu
+          each item in topMenu
+            a.header__menu-item(href=item.link, aria-label=item.label)=item.label
+  .header__bottom
+    .l-default
+      .header__bottom-wrapper
+        a.header__logo(href="/")  
+          +svgColor('logo')
+        .header__search
+          form(action="") 
+            input(type="text" placeholder="Поиск по > 5000 видов плитки")
+            a.header__search-btn(href="") 
+              +svgMono('search')
+          .header__search-result.hidden 
+            a.header__product(href="") 
+              .header__product-img 
+                +webp(['products/2'], 'jpg', 'lazy')
+              .header__product-text JUMP GREEN №1-8 (комплект из 8шт.) 2400*300
+            a.header__product(href="") 
+              .header__product-img
+                +webp(['products/2'], 'jpg', 'lazy')
+              .header__product-text JUMP GREEN №1-8 (комплект из 8шт.) 2400*300
+        .header__phone
+          a.header__phone-label(href="#popup-callback" data-fancybox) заказать звонок
+          a.header__phone-number(href="tel:+74950039767") +7 495 003 97 67
+        .header__icons
+          a.header__icon.header__icon-basket(href="") 
+            .header__icon-count 4
+            .header__icon-img 
+              +svgMono('basket')
+          a.header__icon.header__icon-compare(href="") 
+            .header__icon-count 2
+            .header__icon-img 
+              +svgMono('graph')
+          a.header__icon(href="") 
+            .header__icon-count
+            .header__icon-img 
+              +svgMono('heart')
+          a.header__icon.header__icon-lk(href="") 
+            .header__icon-count
+            .header__icon-img 
+              +svgMono('user')
+        .header__bottom-mobile 
+          .header__burger   
+            .header__burger-spans
+              span
+              span
+              span
+  .header__mobile
+    .header__mobile-head
+      .l-header
+        .header__mobile-logo 
+          +svgColor('logo')
+    .header__mobile-content
+    .header__mobile-footer
+      .l-header
+        .header__mobile-copyrights © 2021 ООО «СТРОЙ-МАГ»
+        a.header__mobile-politics(href="") Политика конфиденциальности
+        .header__mobile-logo-bakin 
+          +svgMono('logo-bakin')
+  include ../../components/sidebar/sidebar-cart-menu.pug
+  include ../../components/popups/popup-compare.pug
+  include ../../components/popups/popup-callback.pug
+  include ../../components/popups/popup-lk.pug
+  include ../../components/popups/popup-message.pug
+    
+    

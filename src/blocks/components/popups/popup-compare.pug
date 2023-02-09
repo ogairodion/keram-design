@@ -1,0 +1,19 @@
+.popup-compare.hidden
+    .popup-compare__products    
+        a.table-product.cart__product(data-id="2" href="")
+            .table-product__column.cart__product-column
+                .table-product__img.cart__product-img
+                    +webp([['products/2']], 'jpg', 'lazy')
+                .table-product__info.cart__product-info
+                    .table-product__info-title.cart__product-title(data-name="Керамогранит BREMEN RIEMCHEN UNGESPALTEN (из 3-х шт) BEIGE 24,5X7") Керамогранит BREMEN RIEMCHEN UNGESPALTEN (из 3-х шт) BEIGE 24,5X7
+                    .table-product__price--result 2 312 ₽
+                object.table-product__delete
+                    a.table-product__input-delete(href="") 
+                        +svgMono('delete')
+    .popup-compare__message Для сравнения, добавьте ещё, хотя бы, один товар
+    .popup-compare__btns
+        button.popup-compare__btn.btn.btn--black.btn-close Ок
+        button.popup-compare__btn.btn.btn--black.btn-compare 
+            .btn-icon
+                +svgMono('graph')
+            .btn-text Сравнить

@@ -1,0 +1,38 @@
+-
+    const main_slider = ['1', '1', '1', '1']
+
+section.main-top
+    .main-top__slider.swiper-container
+        .swiper-wrapper
+            each main_slide in main_slider
+                .swiper-slide.right
+                    +webp(['main-top/' + main_slide], 'jpg', 'lazy')
+                    source(data-srcset="img/main-top/" + main_slide + ".webp" type="image/webp")
+                    source(data-srcset="img/main-top/" + main_slide + ".jpg" type="image/jpg")
+                    img.swiper-lazy(data-src="img/main-top/" + main_slide + ".jpg", alt="")
+    .slider-arrows
+        .slider-arrow.slider-arrow-prev
+            +svgMono('arrow-slider')
+        .slider-arrow.slider-arrow-next
+            +svgMono('arrow-slider')
+    .main-top__content
+        .main-top__info.swiper-container
+            .swiper-wrapper 
+                .swiper-slide
+                    h1.main-top__title.title.title--h1 огромный Шоурум керамической плитки на мкад1
+                    .main-top__subtitle Два этажа эксклюзивной дизайнерской плитки от ведущих мировых производителей керамической плитки по ценам производителя.
+                    a.main-top__btn.btn.btn--white(href="#popup-message" data-fancybox) Адрес на карте
+                .swiper-slide.right
+                    h1.main-top__title.title.title--h1 огромный Шоурум керамической плитки на мкад2
+                    .main-top__subtitle Два этажа эксклюзивной дизайнерской плитки от ведущих мировых производителей керамической плитки по ценам производителя.
+                    a.main-top__btn.btn.btn--white(href="#popup-message" data-fancybox) Адрес на карте
+                .swiper-slide
+                    h1.main-top__title.title.title--h1 огромный Шоурум керамической плитки на мкад3
+                    .main-top__subtitle Два этажа эксклюзивной дизайнерской плитки от ведущих мировых производителей керамической плитки по ценам производителя.
+                    a.main-top__btn.btn.btn--white(href="#popup-message" data-fancybox) Адрес на карте
+                .swiper-slide
+                    h1.main-top__title.title.title--h1 огромный Шоурум керамической плитки на мкад4
+                    .main-top__subtitle Два этажа эксклюзивной дизайнерской плитки от ведущих мировых производителей керамической плитки по ценам производителя.
+                    a.main-top__btn.btn.btn--white(href="#popup-message" data-fancybox) Адрес на карте
+            .main-top__pagination.slider-pagination
+        

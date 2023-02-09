@@ -1,0 +1,13 @@
+include products-data.pug
+include ../../components/product/product.pug
+
+section.products.products-collection
+    .l-default
+        .products__top
+            h2.products__title.title.title--h2 Товары в коллекции Lush
+            include ../../components/filters/filters.pug
+        .products__wrapper
+            .products__items    
+                each product_collection in products
+                    +product(product_collection, '','lazy')
+        a.products__btn.btn.btn--black(href="") Показать ещё

@@ -1,0 +1,16 @@
+.popup.popup-callback#popup-callback
+    .popup-close(data-fancybox-close)
+        .popup-close__spans
+            span 
+            span 
+    .popup-content
+        .popup__title.title--popup Заказать обратный звонок
+        form.form.popup-form.popup-callback__form
+            .form__input
+                label Имя
+                input(type="text" name="name")
+            .form__input
+                label Контактный телефон
+                input(type="tel" name="phone") 
+            .form__submit
+                button.btn.btn--black(type="submit") Позвоните мне 

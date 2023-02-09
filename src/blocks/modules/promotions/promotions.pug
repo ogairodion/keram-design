@@ -1,0 +1,21 @@
+include promotions-data.pug
+include ../../components/product/product.pug
+
+section.promotions
+    .l-default
+        .promotions__top 
+            h2.promotions__title.title.title--h2 Акции от производителей
+            a.btn__more(href="") 
+                .btn__more-text Смотреть всё
+                .btn__more-icon
+                    +svgMono('arrow')
+        .promotions__items.swiper-container 
+            .promotions__items-wrapper.swiper-wrapper
+                each promotions_product in promotions_products
+                    +product(promotions_product, 'swiper-slide', 'swiper-lazy')
+            .slider-arrows
+                .slider-arrow.slider-arrow-prev
+                    +svgMono('arrow-slider')
+                .slider-arrow.slider-arrow-next
+                    +svgMono('arrow-slider')
+        a.btn.btn--all.btn--black(href="") Посмотреть все акции производителей

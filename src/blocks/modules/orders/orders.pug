@@ -1,0 +1,279 @@
+include ../products/products-data.pug
+include ../../components/product/product.pug
+
+section.orders 
+    .l-default
+        .profile-content.orders__wrapper
+            include ../../components/sidebar/sidebar.pug
+            .orders__content
+                h1.orders__title.title.title--h4 Текущие заказы
+                .orders__item
+                    .orders__dropdown.dropdown.open
+                        .orders__dropdown-top.dropdown-top
+                            .orders__top
+                                .dropdown-arrow 
+                                    +svgMono('arrow-dropdown')
+                                .orders__top-info
+                                    .orders__top-title Заказ от 28 ноября
+                                    .orders__top-number 31757223-0028
+                                .orders__top-status.orders__top-status--wait Ожидается оплата
+                        .dropdown-list
+                            .orders__products
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                            .orders__result
+                                .orders__result-item
+                                    .orders__result-left
+                                        .orders__result-title Сумма заказа:
+                                    .orders__result-right
+                                        .orders__result-delivery Почтой России
+                                        .orders__result-price 5 947 ₽
+                                .orders__result-item
+                                    .orders__result-left
+                                        .orders__result-title Скидка:
+                                    .orders__result-right
+                                        .orders__result-price.price--discount 229 ₽
+                                .orders__result-item
+                                    .orders__result-left
+                                        .orders__result-title Доставка:
+                                    .orders__result-right
+                                        .orders__result-price.price--delivery 180 ₽
+                                .orders__result-item
+                                    .orders__result-left
+                                        .orders__result-title Общее:
+                                    .orders__result-right
+                                        .orders__result-price.price--result 6 018 ₽
+                                .orders__result-docs
+                                    .orders__result-item
+                                        .orders__result-left
+                                            .orders__result-title Счет на оплату:
+                                        .orders__result-right   
+                                            a.orders__doc(href="") 
+                                                .orders__doc-icon
+                                                    +svgMono('download')
+                                                .orders__doc-text Акт заказа #31757223-0028
+                                    .orders__result-item
+                                        .orders__result-left
+                                            .orders__result-title Закрывающие документы:
+                                        .orders__result-right   
+                                            a.orders__doc(href="") 
+                                                .orders__doc-icon
+                                                    +svgMono('download')
+                                                .orders__doc-text Счет-фактура#31757223-00
+                            .orders__item-btns
+                                button.orders__item-btn.btn.btn--black Повторить заказ
+                                button.orders__item-btn.btn.btn--white Отменить заказ
+                .orders__item
+                    .orders__dropdown.dropdown
+                        .orders__dropdown-top.dropdown-top
+                            .orders__top
+                                .dropdown-arrow 
+                                    +svgMono('arrow-dropdown')
+                                .orders__top-info
+                                    .orders__top-title Заказ от 28 ноября
+                                    .orders__top-number 31757223-0028
+                                .orders__top-status Отменено
+                        .dropdown-list
+                            .orders__products
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                            .orders__result
+                                .orders__result-item
+                                    .orders__result-left
+                                        .orders__result-title Сумма заказа:
+                                    .orders__result-right
+                                        .orders__result-delivery Почтой России
+                                        .orders__result-price 5 947 ₽
+                                .orders__result-item
+                                    .orders__result-left
+                                        .orders__result-title Скидка:
+                                    .orders__result-right
+                                        .orders__result-price.price--discount 229 ₽
+                                .orders__result-item
+                                    .orders__result-left
+                                        .orders__result-title Доставка:
+                                    .orders__result-right
+                                        .orders__result-price.price--delivery 180 ₽
+                                .orders__result-item
+                                    .orders__result-left
+                                        .orders__result-title Общее:
+                                    .orders__result-right
+                                        .orders__result-price.price--result 6 018 ₽
+                                .orders__result-docs
+                                    .orders__result-item
+                                        .orders__result-left
+                                            .orders__result-title Счет на оплату:
+                                        .orders__result-right   
+                                            a.orders__doc(href="") 
+                                                .orders__doc-icon
+                                                    +svgMono('download')
+                                                .orders__doc-text Акт заказа #31757223-0028
+                                    .orders__result-item
+                                        .orders__result-left
+                                            .orders__result-title Закрывающие документы:
+                                        .orders__result-right   
+                                            a.orders__doc(href="") 
+                                                .orders__doc-icon
+                                                    +svgMono('download')
+                                                .orders__doc-text Счет-фактура#31757223-00
+                            .orders__item-btns
+                                button.orders__item-btn.btn.btn--black Повторить заказ
+                                button.orders__item-btn.btn.btn--white Отменить заказ
+                .orders__item
+                    .orders__dropdown.dropdown
+                        .orders__dropdown-top.dropdown-top
+                            .orders__top
+                                .dropdown-arrow 
+                                    +svgMono('arrow-dropdown')
+                                .orders__top-info
+                                    .orders__top-title Заказ от 28 ноября
+                                    .orders__top-number 31757223-0028
+                                .orders__top-status Отменено
+                        .dropdown-list
+                            .orders__products
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                                .orders__product
+                                    .orders__product-img
+                                        +webp(['products/2'], 'jpg', 'lazy')
+                                    .orders__product-info
+                                        .orders__product-title Отличный инструмент
+                                        .orders__product-price 1 200 ₽
+                            .orders__result
+                                .orders__result-item
+                                    .orders__result-left
+                                        .orders__result-title Сумма заказа:
+                                    .orders__result-right
+                                        .orders__result-delivery Почтой России
+                                        .orders__result-price 5 947 ₽
+                                .orders__result-item
+                                    .orders__result-left
+                                        .orders__result-title Скидка:
+                                    .orders__result-right
+                                        .orders__result-price.price--discount 229 ₽
+                                .orders__result-item
+                                    .orders__result-left
+                                        .orders__result-title Доставка:
+                                    .orders__result-right
+                                        .orders__result-price.price--delivery 180 ₽
+                                .orders__result-item
+                                    .orders__result-left
+                                        .orders__result-title Общее:
+                                    .orders__result-right
+                                        .orders__result-price.price--result 6 018 ₽
+                                .orders__result-docs
+                                    .orders__result-item
+                                        .orders__result-left
+                                            .orders__result-title Счет на оплату:
+                                        .orders__result-right   
+                                            a.orders__doc(href="") 
+                                                .orders__doc-icon
+                                                    +svgMono('download')
+                                                .orders__doc-text Акт заказа #31757223-0028
+                                    .orders__result-item
+                                        .orders__result-left
+                                            .orders__result-title Закрывающие документы:
+                                        .orders__result-right   
+                                            a.orders__doc(href="") 
+                                                .orders__doc-icon
+                                                    +svgMono('download')
+                                                .orders__doc-text Счет-фактура#31757223-00
+                            .orders__item-btns
+                                button.orders__item-btn.btn.btn--black Повторить заказ
+                                button.orders__item-btn.btn.btn--white Отменить заказ

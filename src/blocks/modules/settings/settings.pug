@@ -1,0 +1,62 @@
+section.settings 
+    .l-default
+        .profile-content.compare__wrapper
+            include ../../components/sidebar/sidebar.pug
+            .settings__content
+                h1.settings__title.title.title--h4 Настройки
+                form.form.settings__form
+                .settings__section
+                    .form__radios
+                        .form__radio.radio
+                            input.radio-input(type="radio" name="userFace" checked)
+                            .radio-btn
+                            .radio-text Физическое лицо
+                        .form__radio.radio
+                            input.radio-input(type="radio" name="userFace" checked)
+                            .radio-btn
+                            .radio-text Юридическое лицо
+                    .form__inputs   
+                        .form__input
+                            label Имя
+                            input(type="text" name="name")
+                        .form__input
+                            label Фамилия
+                            input(type="text" name="secondName")
+                        .form__input
+                            label Отчество
+                            input(type="text" name="thirdName")
+                    .form__inputs   
+                        .form__input
+                            label Электронная почта
+                            input(type="email" name="email")
+                        .form__input
+                            label Контактный телефон
+                            input(type="tel" name="phone")
+                .settings__section
+                    .form__title Адрес доставки и получатель
+                    .form__inputs   
+                        .form__input.form__input--index
+                            label Почтовый индекс
+                            input(type="number" name="index" maxlength="6")
+                    .form__inputs   
+                        .form__input
+                            label Область
+                            input(type="text" name="region")
+                        .form__input
+                            label Город
+                            input(type="text" name="city")
+                    .form__inputs   
+                        .form__input.form__input--address
+                            label Адрес
+                            input(type="text" name="address")
+                .settings__section
+                    .form__title Сменить пароль
+                    .form__inputs   
+                        .form__input
+                            label Старый пароль
+                            input(type="password" name="oldPassword")
+                    .form__inputs   
+                        .form__input
+                            label Новый пароль
+                            input(type="password" name="password")
+                    button.form__submit.btn.btn--black(type="submit") Сохранить

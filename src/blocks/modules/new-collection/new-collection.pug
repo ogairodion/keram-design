@@ -1,0 +1,23 @@
+include new-collection-data.pug
+include ../../components/collection/collection.pug
+
+section.new-collection
+    .l-default
+        .new-collection__wrapper
+            .new-collection__top
+                h2.new-collection__title.title.title--h2 Новинки коллекций 2022
+                a.btn__more(href="") 
+                    .btn__more-text Все коллекции
+                    .btn__more-icon
+                        +svgMono('arrow')
+            .new-collection__items
+                .new-collection__items-wrapper
+                    each collection in collections
+                        +collection(collection, '', 'swiper-lazy')
+                .slider-arrows
+                    .slider-arrow.slider-arrow-prev
+                        +svgMono('arrow-slider')
+                    .slider-arrow.slider-arrow-next
+                        +svgMono('arrow-slider')
+            a.btn.btn--all.btn--black(href="") Посмотреть все коллекции
+

@@ -1,0 +1,22 @@
+include articles-data.pug
+include ../../components/article/article.pug
+
+section.articles
+    .l-default
+        .articles__wrapper
+            .articles__top
+                h2.articles__title.title.title--h2 Полезные статьи о дизайне и ремонте
+                a.btn__more(href="") 
+                    .btn__more-text Все статьи
+                    .btn__more-icon
+                        +svgMono('arrow')
+        .articles__items.swiper-container 
+            .articles__items-wrapper.swiper-wrapper
+                each article in articles
+                    +article(article, 'swiper-slide', 'swiper-lazy')
+            .slider-arrows
+                .slider-arrow.slider-arrow-prev
+                    +svgMono('arrow-slider')
+                .slider-arrow.slider-arrow-next
+                    +svgMono('arrow-slider')
+

@@ -1,0 +1,235 @@
+include ../compare/products-data.pug
+include ../../components/product/product.pug
+
+section.compare 
+    .l-default
+        .profile-content.compare__wrapper
+            include ../../components/sidebar/sidebar.pug
+            .compare__content
+                .compare__top
+                    h1.compare__title.title.title--h4 Сравнение
+                    .compare__checkbox.checkbox
+                        input.checkbox__input(type="checkbox" checked)
+                        .checkbox__btn
+                        .checkbox__text Показывать только отличия
+                .compare__sliders-wrapper
+                    .compare__sliders
+                        .compare__slider.swiper-container.swiper-container-left
+                            .compare__sliders-info
+                                .compare__sliders-count <span class="active-slide">1</span> товар из <span class="slides-length">4</span>
+                                .compare__sliders-pagination.compare__sliders-pagination-1
+                            .swiper-wrapper
+                                each product_collection in products
+                                    +product(product_collection, 'compare__slide swiper-slide','compare-slide')
+                            .slider-arrows
+                                .slider-arrow.slider-arrow-prev
+                                    +svgMono('arrow-slider')
+                                .slider-arrow.slider-arrow-next
+                                    +svgMono('arrow-slider')
+                        .compare__slider.swiper-container.swiper-container-center
+                            .compare__sliders-info
+                                .compare__sliders-count <span class="active-slide">1</span> товар из <span class="slides-length">4</span>
+                                .compare__sliders-pagination.compare__sliders-pagination-2
+                            .swiper-wrapper
+                                each product_collection in products
+                                    +product(product_collection, 'compare__slide swiper-slide','compare-slide')
+                            .slider-arrows
+                                .slider-arrow.slider-arrow-prev
+                                    +svgMono('arrow-slider')
+                                .slider-arrow.slider-arrow-next
+                                    +svgMono('arrow-slider')
+                        .compare__slider.swiper-container.swiper-container-right
+                            .compare__sliders-info
+                                .compare__sliders-count <span class="active-slide">1</span> товар из <span class="slides-length">4</span>
+                                .compare__sliders-pagination.compare__sliders-pagination-3
+                            .swiper-wrapper
+                                each product_collection in products
+                                    +product(product_collection, 'compare__slide swiper-slide','compare-slide')
+                            .slider-arrows
+                                .slider-arrow.slider-arrow-prev
+                                    +svgMono('arrow-slider')
+                                .slider-arrow.slider-arrow-next
+                                    +svgMono('arrow-slider')
+                    .compare__sliders
+                        .compare__slider-wrapper
+                            .compare__slider-table--head
+                                .table-slide__td Ширина
+                                .table-slide__td Длина
+                                .table-slide__td Глубина
+                                .table-slide__td Высота
+                                .table-slide__td Глубина
+                                .table-slide__td Высота
+                            .compare__slider-table.swiper-container.swiper-container-table-left
+                                .swiper-wrapper 
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                            .compare__slider-table.swiper-container-table-center
+                                .swiper-wrapper 
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                            .compare__slider-table.swiper-container-table-right
+                                .swiper-wrapper 
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                    .swiper-slide.table-slide
+                                        .table-slide__td.table-slide__top 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;
+                                        .table-slide__td 70
+                                        .table-slide__td &mdash;

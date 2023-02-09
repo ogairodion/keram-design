@@ -1,0 +1,13 @@
+form.filters(action="") 
+    .filters__select
+        select.select(name="")  
+            option(selected="selected") Сначала дешевые
+            option Сначала дешевые
+            option Сначала дорогие
+    .filters__btns
+        .filters__btn.active(data-filter="tpl-1")
+            +svgMono('small-filter')
+        .filters__btn(data-filter="tpl-2")
+            +svgMono('medium-filter')
+        .filters__btn(data-filter="tpl-3")
+            +svgMono('big-filter')

@@ -1,0 +1,8 @@
+mixin article(article, className, lazy)
+    a.article(href=article.href class=className)
+        .article__img
+            source(data-srcset="img/" + article.img + ".webp" type="image/webp")
+            source(data-srcset="img/" + article.img + ".jpg" type="image/jpg")
+            img(data-src="img/" + article.img + ".jpg", alt="" class=lazy)
+        .article__info
+            .article__title= article.title 

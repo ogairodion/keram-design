@@ -1,0 +1,125 @@
+.favorites {
+    padding: 47px 0 80px;
+    @media screen and (max-width: 1199px) {
+        padding: 20px 0 40px;
+    }  
+    @media screen and (max-width: 600px) {
+        padding: 0 0 40px;
+    }  
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__title {
+        @media screen and (max-width: 1199px) {
+            margin-bottom: 20px;
+        }  
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+
+        @media screen and (max-width: 1199px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }  
+    }
+
+    &__tabs {
+        display: flex;
+
+        @media screen and (max-width: 1199px) {
+            width: 100%;
+        }  
+    }
+
+    &__tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 116px;
+        min-height: 38px;
+        font-size: 15px;
+        line-height: 1;
+        font-weight: 900;
+        background: #F7F7F7;
+        transition: all .4s ease;
+        @media screen and (max-width: 1199px) {
+            width: 50%;
+        }  
+
+        &.active, &:hover  {
+            color: #fff;
+            background: #22201E;
+        }
+    }
+    &__products {
+        animation: show .4s ease;
+    }
+
+    &__collections {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+        animation: show .4s ease;
+
+        .collection {
+            width: calc(50% - 20px);
+            margin: 0 10px 20px;
+
+            @media screen and (max-width: 1599px) {
+                .collection__title, .collection__count {
+                    font-size: 15px;
+                }
+            } 
+
+            @media screen and (max-width: 1199px) {
+                .collection__title, .collection__count {
+                    font-size: 24px;
+                    margin-top: 6px;
+                }
+            } 
+
+            @media screen and (max-width: 767px) {
+                .collection__price {
+                    margin-left: auto;
+                }
+            } 
+
+            @media screen and (max-width: 600px) {
+                width: 100%;
+                margin: 0 10px 20px;
+            } 
+        }
+    }
+
+    .table-product {
+        &__column {
+            align-items: center;
+            &:last-child {
+                @media screen and (max-width: 1199px) {
+                    margin-left: 84px;
+                } 
+
+                .table-product__input-delete, .table-product__input-buy {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        &__info {
+            &-title {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .cart__product-info-size {
+        font-size: 13px;
+    }
+}

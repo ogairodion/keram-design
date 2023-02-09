@@ -1,0 +1,32 @@
+include catalog-data.pug
+include ../../components/collection/collection.pug
+
+section.catalog-main
+    .l-default 
+        .l-content
+            .catalog-main__wrapper
+                .catalog-main__top.page-top
+                    a.page-top__back(href="")      
+                        +svgMono('arrow')
+                    h1.catalog-main__title.title.title--h4 Каталог керамической плитки
+                .catalog-main__description 
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        each catalog_slider in catalog_sliders
+            .catalog-main__slider-top
+                h2.catalog-main__slider-title.title.title--h2= catalog_slider.title
+                a.btn__more(href="") 
+                    .btn__more-text Все фабрики
+                    .btn__more-icon
+                        +svgMono('arrow')
+            .catalog-main__slider-wrapper
+                .catalog-main__slider.swiper-container
+                    .swiper-wrapper
+                        each catalog_slide in catalog_slider.items
+                            +collection(catalog_slide, 'swiper-slide', 'swiper-lazy')
+                    .slider-arrows
+                        .slider-arrow.slider-arrow-prev
+                            +svgMono('arrow-slider')
+                        .slider-arrow.slider-arrow-next
+                            +svgMono('arrow-slider')
+                a.catalog-main__slider-btn.btn.btn--black(href="") Все коллекции плитки для ванной

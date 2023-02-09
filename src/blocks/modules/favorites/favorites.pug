@@ -1,0 +1,85 @@
+include ../catalog/catalog-data.pug
+include ../../components/collection/collection.pug
+
+section.favorites
+    .l-default  
+        .profile-content.favorites__wrapper 
+            include ../../components/sidebar/sidebar.pug
+            .favorites__content
+                .favorites__top
+                    h1.favorites__title.title.title--h4 Избранное
+                    .favorites__tabs
+                        a.favorites__tab.active(href="" data-items="products") Товар
+                        a.favorites__tab(href="" data-items="collections") Коллекции
+                .favorites__products.hidden
+                    .table-products
+                        .table-product__headers.cart__product.cart__product-headers
+                            .table-product__column.cart__product-column
+                                .table-product__title.cart__product-title Товар
+                            .table-product__column.cart__product-column
+                                .table-product__title.cart__product-title Количество
+                            .table-product__column.cart__product-column
+                                .table-product__title.cart__product-title Цена
+                        .table-product.cart__product(data-id="2")
+                            .table-product__column.cart__product-column
+                                .table-product__img.cart__product-img
+                                    +webp([['products/2']], 'jpg', 'lazy')
+                                .table-product__info.cart__product-info
+                                    .table-product__info-title.cart__product-title(data-name="Керамогранит BREMEN RIEMCHEN UNGESPALTEN (из 3-х шт) BEIGE 24,5X7") Керамогранит BREMEN RIEMCHEN UNGESPALTEN (из 3-х шт) BEIGE 24,5X7
+                                    .cart__product-info-size(data-size="77") Рамер: <span>77 мм</span>
+                            .table-product__column.cart__product-column
+                                .table-product__input.cart__product-input
+                                    .table-product__input-control.table-product__input-minus -
+                                    input(type="number" name="count" value="0" min="0")
+                                    .table-product__input-control.table-product__input-plus +
+                            .table-product__column.cart__product-column   
+                                .table-product__price.cart__product-price(data-price="2312")
+                                    .table-product__price--result 2 312 ₽
+                                    .table-product__price 1 156 ₽ / шт
+                                .table-product__input-delete 
+                                    +svgMono('delete')
+                                .table-product__input-buy 
+                                    +svgMono('basket')
+                    .table-product.cart__product(data-id="2")
+                        .table-product__column.cart__product-column
+                            .table-product__img.cart__product-img
+                                +webp([['products/2']], 'jpg', 'lazy')
+                            .table-product__info.cart__product-info
+                                .table-product__info-title.cart__product-title(data-name="Керамогранит BREMEN RIEMCHEN UNGESPALTEN (из 3-х шт) BEIGE 24,5X7") Керамогранит BREMEN RIEMCHEN UNGESPALTEN (из 3-х шт) BEIGE 24,5X7
+                                .cart__product-info-size(data-size="77") Рамер: <span>77 мм</span>
+                        .table-product__column.cart__product-column
+                            .table-product__input.cart__product-input
+                                .table-product__input-control.table-product__input-minus -
+                                input(type="number" name="count" value="0" min="0")
+                                .table-product__input-control.table-product__input-plus +
+                        .table-product__column.cart__product-column   
+                            .table-product__price.cart__product-price(data-price="2312")
+                                .table-product__price--result 2 312 ₽
+                                .table-product__price 1 156 ₽ / шт
+                            .table-product__input-delete 
+                                +svgMono('delete')
+                            .table-product__input-buy 
+                                +svgMono('basket')
+                    .table-product.cart__product(data-id="2")
+                        .table-product__column.cart__product-column
+                            .table-product__img.cart__product-img
+                                +webp([['products/2']], 'jpg', 'lazy')
+                            .table-product__info.cart__product-info
+                                .table-product__info-title.cart__product-title(data-name="Керамогранит BREMEN RIEMCHEN UNGESPALTEN (из 3-х шт) BEIGE 24,5X7") Керамогранит BREMEN RIEMCHEN UNGESPALTEN (из 3-х шт) BEIGE 24,5X7
+                                .cart__product-info-size(data-size="77") Рамер: <span>77 мм</span>
+                        .table-product__column.cart__product-column
+                            .table-product__input.cart__product-input
+                                .table-product__input-control.table-product__input-minus -
+                                input(type="number" name="count" value="0" min="0")
+                                .table-product__input-control.table-product__input-plus +
+                        .table-product__column.cart__product-column   
+                            .table-product__price.cart__product-price(data-price="2312")
+                                .table-product__price--result 2 312 ₽
+                                .table-product__price 1 156 ₽ / шт
+                            .table-product__input-delete 
+                                +svgMono('delete')
+                            .table-product__input-buy 
+                                +svgMono('basket')
+                .favorites__collections
+                    each catalog_collection in catalog_collections
+                        +collection(catalog_collection, 'favorite-collection catalog-collections__item','lazy') 

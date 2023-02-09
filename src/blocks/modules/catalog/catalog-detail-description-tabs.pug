@@ -1,0 +1,67 @@
+section.catalog-detail-description-tabs
+    .l-default.l-default-compact
+        .catalog-detail-description-tabs__controls
+            .catalog-detail-description-tabs__control.active(data-id="0") Описание 
+            .catalog-detail-description-tabs__control(data-id="1") Отзывы
+        .catalog-detail-description-tabs__items
+            .catalog-detail-description-tabs__item(data-id="0")
+                .catalog-detail-description-tabs__info.tab-content
+                    .catalog-detail-description-tabs__info-title Описание
+                    .catalog-detail-description-tabs__info-content
+                        a.catalog-detail-description-tabs__video(href="https://www.youtube.com/watch?v=O2mM21mjmyY&ab_channel=%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%D1%8B%D0%BF%D0%BE%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%D1%83%D0%BE%D1%82%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%8F%D0%A7%D1%83%D0%B1%D0%B0%D1%80%D0%BE%D0%B2%D0%B0" data-fancybox)  
+                            .catalog-detail-description-tabs__video-img
+                                +webp(['video/1'], 'jpg', 'lazy')
+                            .catalog-detail-description-tabs__video-icon
+                                +svgMono('play')
+                        .catalog-detail-description-tabs__texts
+                            .catalog-detail-description-tabs__title Описание напольной плитки PAV. IBIZA SKY (м2) 75*75
+                            .catalog-detail-description-tabs__text 
+                                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+                                p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
+            .catalog-detail-description-tabs__item.reviews.hidden(data-id="1")
+                .catalog-detail-description-tabs__info
+                    .catalog-detail-description-tabs__info-title Отзывы
+                    .catalog-detail-description-tabs__reviews.tab-content
+                        .review
+                            .review__top
+                                .review__img
+                                    +webp(['reviews/1'], 'jpg', 'lazy')
+                                .review__name Мария
+                            .review__message Почему?! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            .review.review--answer
+                                .review__top
+                                    .review__img
+                                        +webp(['reviews/1'], 'jpg', 'lazy')
+                                    .review__name Мария
+                                .review__message Почему?! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        .review
+                            .review__top
+                                .review__img
+                                    +webp(['reviews/1'], 'jpg', 'lazy')
+                                .review__name Мария
+                            .review__message Почему?! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            .review.review--answer
+                                .review__top
+                                    .review__img
+                                        +webp(['reviews/1'], 'jpg', 'lazy')
+                                    .review__name Мария
+                                .review__message Почему?! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        a.catalog-detail-description-tabs__btn.btn.btn--black.btn--more(href="") Ещё вопросы
+                        form.catalog-detail-description-tabs__form.form
+                            .form__title.catalog-detail-description-tabs__title Задайте вопрос специалисту
+                            .attention
+                                .attention__icon
+                                    +svgMono('info')
+                                .attention__info
+                                    .attention__info-title Авторизуйтесь
+                                    .attention__info-text Чтобы оставить отзыв необходимо авторизоваться
+                            .form__inputs
+                                .form__input
+                                    label Заголовок вопроса
+                                    input(type="text" placeholder="Тема")
+                                .form__textarea
+                                    label Вопрос
+                                    textarea(placeholder="Сообщение")
+                                .form__submit
+                                    button.btn.btn--black(type="submit") Отправить вопрос
+

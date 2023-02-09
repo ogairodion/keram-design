@@ -1,0 +1,16 @@
+include sales-data.pug
+include ../../components/sale/sale.pug
+
+section.sales
+    .l-default
+        .sales__wrapper
+            .sales__items.swiper-container 
+                .swiper-wrapper
+                    each sale in sales
+                        +sale(sale, 'swiper-slide', 'swiper-lazy')
+                .slider-arrows
+                    .slider-arrow.slider-arrow-prev
+                        +svgMono('arrow-slider')
+                    .slider-arrow.slider-arrow-next
+                        +svgMono('arrow-slider')
+

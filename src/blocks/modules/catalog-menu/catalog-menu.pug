@@ -1,0 +1,49 @@
+include catalog-menu-items.pug
+
+.catalog-menu
+    .catalog-menu__wrapper
+        .catalog-menu__items.swiper-container
+            .catalog-menu__burger   
+                .catalog-menu__burger-spans  
+                    span 
+                    span 
+                    span  
+            .catalog-menu__items-wrapper.swiper-wrapper
+                each catalog_menu_item in catalog_menu
+                    - if (catalog_menu_item.content)
+                        .catalog-menu__item.swiper-slide(class=catalog_menu_item.class data-id=catalog_menu_item.id)
+                            a.catalog-menu__item-text(href="")= catalog_menu_item.text
+                            - if (catalog_menu_item.content)
+                                .catalog-menu__body-wrapper
+                                    .catalog-menu__body.hidden
+                                        .catalog-menu__body-left.catalog-menu__left
+                                            each catalog_menu_left_item in catalog_menu_item.content.menu
+                                                .catalog-menu__left-item(data-id=catalog_menu_left_item.id)
+                                                    .catalog-menu__left-icon    
+                                                        //- +svgMono('star') 
+                                                        img(src="img/svg/star.svg", alt="")
+                                                    a.catalog-menu__left-link(href="")= catalog_menu_left_item.text 
+                                                    .dropdown-icon
+                                                    .catalog-menu__left-list 
+                                        each catalog_menu_body in catalog_menu_item.content.body
+                                            .catalog-menu__body-right.catalog-menu__content.hidden(data-id=catalog_menu_body.id)
+                                                .catalog-menu__content-title= catalog_menu_body.title
+                                                .catalog-menu__columns
+                                                    each catalog_menu_column in catalog_menu_body.columns
+                                                        .catalog-menu__column
+                                                            .catalog-menu__column-items
+                                                            if (catalog_menu_column.title)
+                                                                a.catalog-menu__column-title(href="https://keram.design/katalog/plitka-dlya-vannoy/")= catalog_menu_column.title
+                                                                each catalog_menu_column_item in catalog_menu_column.items
+                                                                    a.catalog-menu__column-item(href=catalog_menu_column_item.href)= catalog_menu_column_item.text 
+                                                .catalog-menu__bottom
+                                                    .catalog-menu__bottom-title= catalog_menu_item.brands.title
+                                                    .catalog-menu__brands
+                                                        each catalog_menu_brand in catalog_menu_item.brands.items
+                                                            a.catalog-menu__brand(href=catalog_menu_brand.href)
+                                                                img.lazy(data-src="img/svg/brands/" + catalog_menu_brand.img + ".svg")
+                    - else 
+                        a.catalog-menu__item.swiper-slide(class=catalog_menu_item.class href=catalog_menu_item.href)
+                            .catalog-menu__item-text= catalog_menu_item.text
+                    
+                                                            

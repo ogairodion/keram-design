@@ -1,0 +1,81 @@
+mixin product(product, className, lazy)
+    a.product(class=className href=product.href) 
+        .product__img
+            - if (product.imgs)
+                each product_img in product.imgs
+                    .product__img-gallery(data-fancybox="gallery" data-caption="text" data-src="img/" + product_img + ".jpg")
+                        - if (lazy == 'lazy' || lazy=='swiper-lazy')
+                            picture
+                                source(data-srcset="img/" + product_img + ".webp" type="image/webp")
+                                source(data-srcset="img/" + product_img + ".jpg" type="image/jpg")
+                                img(data-src="img/" + product_img + ".jpg", alt="" class=lazy)
+                        - else 
+                            picture
+                                source(srcset="img/" + product.img + ".webp" type="image/webp")
+                                source(srcset="img/" + product.img + ".jpg" type="image/jpg")
+                                img(src="img/" + product.img + ".jpg", alt="")
+            - else 
+                .product__img-gallery(data-fancybox data-caption="text" data-src="img/" + product.img + ".jpg")
+                    - if (lazy == 'lazy' || lazy=='swiper-lazy')
+                        picture
+                            source(data-srcset="img/" + product.img + ".webp" type="image/webp")
+                            source(data-srcset="img/" + product.img + ".jpg" type="image/jpg")
+                            img(data-src="img/" + product.img + ".jpg", alt="" class=lazy)
+                    - else 
+                        picture
+                            source(srcset="img/" + product.img + ".webp" type="image/webp")
+                            source(srcset="img/" + product.img + ".jpg" type="image/jpg")
+                            img(src="img/" + product.img + ".jpg", alt="")
+        .product__info
+            .product__title= product.title
+            - if (product.text)
+                .product__text!= product.text
+        form.product__info.product__info-price
+            - if (product.status)
+                .status= product.status
+            - if (lazy == 'compare-slide')
+                .product__price-wrapper
+                    .product__price-old= product.oldprice + ' ₽'
+                    .product__price!= product.price + '₽ <span>/ м<sup>2</sup></span>'
+            - else
+                .product__price-old= product.oldprice + ' ₽'
+                .product__price!= product.price + '₽ <span>/ м<sup>2</sup></span>'
+            .product__icons
+                object
+                    a.product__icon.product__icons-graph(href="")  
+                        .product__icon-text Сравнить
+                        +svgMono('graph')
+                        .product__icon-count 10
+                object
+                    a.product__icon.product__icons-favorites 
+                        .product__icon-text В избранное
+                        +svgMono('heart')
+                        .product__icon-count
+                - if (lazy == 'compare-slide')
+                    object
+                        a.product__icon.product__icons-delete(href="") 
+                            +svgMono('delete')
+                object
+                    a.product__icon.product__btn-basket(href="") 
+                        .product__icon-text В корзину
+                        +svgMono('basket')
+                        .product__icon-count 4
+        object.product__btn-wrapper
+            a.product__btn.product__btn-top.btn.btn--black(href="") Посмотреть плитку
+        .product__icons.product__icons-bottom
+            object
+                a.product__icon.product__icons-favorites 
+                    .product__icon-text В избранное
+                    +svgMono('heart')
+                    .product__icon-count
+            object
+                a.product__icon.product__icons-graph(href="")  
+                    .product__icon-text Сравнить
+                    +svgMono('graph')
+                    .product__icon-count 10
+            object
+                a.product__icon.product__icons-basket(href="") 
+                    +svgMono('basket')
+                    .product__icon-count 4
+        object.product__btn-wrapper
+            button.product__btn.btn.btn--black(type="submit" href="" name="ms2_action" value="cart/add") Добавить в корзину

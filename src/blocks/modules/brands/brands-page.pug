@@ -1,0 +1,13 @@
+include brands-data.pug
+include ../../components/brand/brand.pug
+
+section.brands.brands-page
+    .l-content
+        .brands-page__content
+            .brands-page__top.page-top
+                a.page-top__back(href="")      
+                    +svgMono('arrow')
+                h1.brands-page__title.title.title--h2 Производители керамической плитки 
+            .brands-page__items
+                each brand in brands
+                    +brand(brand, '', 'lazy')

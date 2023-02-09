@@ -1,0 +1,16 @@
+.brand {
+    &__img {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 79px;
+        max-height: 79px;
+
+        img {
+            display: block;
+            width: auto;
+            height: 100%;
+        }
+    }
+}

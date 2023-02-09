@@ -1,0 +1,229 @@
+.brands {
+    position: relative;
+    padding: 24px 0 0;
+
+    &__items {
+        position: relative;
+        width: 80%;
+    }
+
+    &__wrapper {
+        border-bottom: 2px solid $black;
+        padding-bottom: 60px;
+
+        @media screen and (max-width: 600px) {
+            padding-bottom: 18px;
+            border-bottom: none;
+        }
+    }
+
+    &__slider {
+        &-wrapper {
+            position: relative;
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 52px;
+    }
+    
+    &-page {
+        padding: 0 !important;
+        &__content {
+            padding: 36px 0 57px;
+            @media screen and (max-width: 991px) {
+                padding: 28px 0 40px;
+            }
+    
+            @media screen and (max-width: 600px) {
+                padding: 18px 0 30px;
+            }
+        }
+        &__top {
+            display: flex;
+            align-items: center;
+        }
+        .page-top {
+            margin-bottom: 32px;
+            
+            @media screen and (max-width: 600px) {
+                margin-bottom: 22px;
+            }
+        }
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -14px;
+
+            @media screen and (max-width: 600px) {
+                margin: 0;
+            }
+        }
+
+        .brand {
+            width: calc(16.6666% - 28px);
+            margin: 0 14px 55px;
+
+            @media screen and (max-width: 991px) {
+                width: calc(33.3333% - 28px);
+                margin: 0 14px 35px;
+            }
+
+            @media screen and (max-width: 600px) {
+                width: calc(50% - 28px);
+                margin: 0 14px 20px;
+            }
+
+            &__img {
+                justify-content: flex-start;
+                @media screen and (max-width: 600px) {
+                    height: 50px;
+                    min-height: 50px;
+                }   
+            }
+        }
+    }
+
+    &-detail {
+        padding: 22px 0 30px;
+
+        @media screen and (max-width: 600px) {
+            padding: 18px 0 10px;
+        }   
+        .page-top {
+            margin-bottom: 30px;
+
+            @media screen and (max-width: 991px) {
+                margin-bottom: 16px;
+            }   
+        }
+        .breadcrumbs {
+            @media screen and (max-width: 991px) {
+                display: none;
+            }   
+        }
+        .brand {
+            &__img {
+                justify-content: flex-start;
+            }
+        }
+        &__wrapper {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 14px;
+
+            @media screen and (max-width: 991px) {
+                margin-top: 0;
+            }   
+        }
+
+        &__logo {
+            width: 20%;
+            margin-right: 100px;
+
+            @media screen and (max-width: 991px) {
+                display: none;
+            }   
+        }
+
+        &__info {
+            width: 80%;
+
+            @media screen and (max-width: 991px) {
+                width: 100%;
+            }   
+        }
+
+        &__title {
+            max-width: 1100px;
+        }
+
+        &__description {
+            font-size: 20px;
+            line-height: 120%;
+            margin-bottom: 24px;
+
+            @media screen and (max-width: 991px) {
+                font-size: 16px;
+                margin-bottom: 24px;
+            }   
+        }
+
+        &__items {
+            &-title {
+                margin-bottom: 24px;
+            }
+
+            &-content {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -10px;
+
+                @media screen and (max-width: 767px) {
+                    margin: 0;
+                }  
+            }
+        }
+
+        .collection {
+            position: relative;
+            width: calc(33.3333% - 20px) !important; 
+            margin: 0 10px 20px; 
+            @media screen and (max-width: 1899px) {
+                width: calc(50% - 20px) !important;
+            }   
+            @media screen and (max-width: 767px) {
+                width: 100% !important;
+                margin: 0 0 30px;
+            }  
+
+            &__img {
+                position: relative;
+                min-height: 356px;
+                margin-bottom: 12px;
+                @media screen and (max-width: 991px) {
+                    min-height: 190px;
+                }   
+            }
+
+            &__text {
+                width: calc(100% - 100px);
+                max-width: 400px;
+
+                @media screen and (max-width: 1299px) {
+                    display: none;
+                }  
+            }
+
+            .btn {
+                display: none;
+                font-size: 16px;
+                text-align: center;
+                padding: 11px 0;
+                margin-top: 18px;
+                @media screen and (max-width: 991px) {
+                    display: block;
+                }   
+            }
+        }
+    }
+
+    .btn--all {
+        display: none;
+        font-size: 14px;
+        margin-top: 30px;
+        padding: 12px 0;
+
+        @media screen and (max-width: 1199px) {
+            display: block;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            margin-top: 20px;
+        }
+    }
+}

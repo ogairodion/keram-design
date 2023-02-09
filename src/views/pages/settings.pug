@@ -1,0 +1,18 @@
+extends ../layouts/default
+include ../helpers/_mixins-default
+include ../helpers/_mixins-custom
+
+block variables
+  - const title = "Шаблон детальная страница бренда"
+
+block content
+  .shadow.hidden
+  include ../../blocks/modules/header/header.pug
+  include ../../blocks/modules/catalog-menu/catalog-menu.pug
+  main.main
+    include ../../blocks/modules/settings/settings.pug
+  include ../../blocks/modules/footer/footer.pug
+
+block scripts
+  script(defer src="./js/vendor.js")
+  script(defer src="./js/main.js")

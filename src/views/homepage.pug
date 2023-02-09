@@ -1,0 +1,24 @@
+extends layouts/default
+include helpers/_mixins-default
+include helpers/_mixins-custom
+
+block variables
+  - const title = "Главная страница Keram Design"
+
+block content
+  .shadow.hidden
+  include ../blocks/modules/header/header.pug
+  include ../blocks/modules/catalog-menu/catalog-menu.pug
+  main.main   
+    include ../blocks/modules/main-top/main-top.pug
+    include ../blocks/modules/new-collection/new-collection.pug
+    include ../blocks/modules/promotions/promotions.pug
+    include ../blocks/modules/sales/sales.pug
+    include ../blocks/modules/brands/brands.pug
+    include ../blocks/modules/articles/articles.pug
+    include ../blocks/modules/message/message.pug
+  include ../blocks/modules/footer/footer.pug
+
+block scripts
+  script(defer src="js/vendor.js")
+  script(defer src="js/main.js")

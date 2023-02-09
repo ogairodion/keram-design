@@ -1,0 +1,62 @@
+.page-404 {
+    padding: 116px 20px;
+
+    @media screen and (max-width: 1199px) {
+        padding: 50px 20px;
+    }
+    &__title {
+        text-align: center;
+        color: transparent;
+        background-image: url('.././img/404/bg.jpg');
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-size: contain;
+        margin-bottom: 81px;
+
+        @media screen and (max-width: 1199px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 36px;
+        line-height: 160%;
+        text-align: center;
+        margin-bottom: 81px;
+
+        @media screen and (max-width: 1199px) {
+            font-size: 24px;
+            margin-bottom: 50px;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 18px;
+        }
+    }
+    
+    &__link {
+        position: relative;
+        text-decoration: underline;
+        color: #CEB08F;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        min-height: 70px;
+        font-size: 27px;
+        line-height: 1;
+        font-weight: 900;
+        margin: 0 auto;
+
+        @media screen and (max-width: 1199px) {
+            font-size: 18px;
+        }
+
+        &:hover {
+            background: $black;
+        }
+    }
+}

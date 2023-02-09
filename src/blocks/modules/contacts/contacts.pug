@@ -1,0 +1,17 @@
+section.contacts 
+    .l-default
+        .profile-content.contacts__wrapper
+            include ../../components/sidebar/sidebar.pug
+            .contacts__content
+                h1.contacts__title.title.title--h4 Контакты
+                .contacts__content-body
+                    .contacts__map 
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A29697544bb6737068e11107226010f948afab7947cbeb8b70359b91034e856b8&amp;source=constructor" frameborder="0"></iframe>
+                    .contacts__info
+                        .contacts__info-icon
+                            img.lazy(data-src="img/svg/logo-mini.svg", alt="")
+                        .contacts__info-body
+                            a.contacts__info-address(href="") г. Мытищи, М.О., Ярославское шоссе, д. 118 Б
+                            a.contacts__info-phone(href="tel:+74956417065") +7 (495) 641-70-65
+                            .contacts__info-time 9:00 - 21:00, вход по QR-коду.
+                    

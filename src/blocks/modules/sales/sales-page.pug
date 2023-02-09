@@ -1,0 +1,13 @@
+include sales-data.pug
+include ../../components/sale/sale.pug
+
+section.sales.sales-page
+    .l-content
+        .sales-page__content
+            .sales-page__top.page-top
+                a.page-top__back(href="")      
+                    +svgMono('arrow')
+                h1.sales-page__title.title.title--page Распродажа керамической плитки 
+            .sales-page__items
+                each sale in sales
+                    +sale(sale, '', 'lazy')

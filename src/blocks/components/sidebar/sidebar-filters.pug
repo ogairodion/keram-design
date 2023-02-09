@@ -1,0 +1,153 @@
+.sidebar.sidebar-filters
+    form.sidebar-filters__form
+        .sidebar-filters__item
+            .sidebar-filters__item-content.sidebar-button(value="Новинки плитки")
+                .sidebar-filters__item-icon
+                    //- +svgMono('star')
+                    img(src="img/svg/star.svg", alt="")
+                .sidebar-filters__item-title Новинки плитки
+                input.sidebar-input.sidebar-button(type="checkbox" value="Новинки плитки")
+        .sidebar-filters__item
+            .sidebar-filters__item-content
+                .sidebar-filters__item-icon
+                    +svgMono('eye')
+                .sidebar-filters__item-title Популярная плитка
+            .sidebar-filters__list.dropdown
+                .sidebar-filters__list-top.dropdown-top
+                    .sidebar-filters__list-title.dropdown-title Плитка для ванной
+                    .dropdown-arrow 
+                        +svgMono('arrow-dropdown')
+                .sidebar-filters__list-items.dropdown-list
+                    .sidebar-filters__list-item.dropdown-list-item 
+                        .dropdown-list-item__text Подкатегория первая
+                        input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория первая")
+                    .sidebar-filters__list-item.dropdown-list-item  
+                        .dropdown-list-item__text Подкатегория вторая
+                        input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория вторая")
+                    .sidebar-filters__list-item.dropdown-list-item 
+                        .dropdown-list-item__text Подкатегория третья
+                        input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория третья")
+                    .sidebar-filters__list-item.dropdown-list-item 
+                        .dropdown-list-item__text Подкатегория четвертая
+                        input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория четвертая")
+            .sidebar-filters__list.dropdown
+                .sidebar-filters__list-top.dropdown-top
+                    .sidebar-filters__list-title.dropdown-title Плитка для ванной
+                    .dropdown-arrow 
+                        +svgMono('arrow-dropdown')
+                .sidebar-filters__list-items.dropdown-list
+                    .sidebar-filters__list-item.dropdown-list-item 
+                        .dropdown-list-item__text Подкатегория первая
+                        input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория первая")
+                    .sidebar-filters__list-item.dropdown-list-item  
+                        .dropdown-list-item__text Подкатегория вторая
+                        input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория вторая")
+                    .sidebar-filters__list-item.dropdown-list-item 
+                        .dropdown-list-item__text Подкатегория третья
+                        input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория третья")
+                    .sidebar-filters__list-item.dropdown-list-item 
+                        .dropdown-list-item__text Подкатегория четвертая
+                        input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория четвертая")
+            .sidebar-filters__list.dropdown
+                .sidebar-filters__list-top.dropdown-top
+                    .sidebar-filters__list-title.dropdown-title Плитка для ванной
+                    .dropdown-arrow 
+                        +svgMono('arrow-dropdown')
+                .sidebar-filters__list-items.dropdown-list
+                    .sidebar-filters__list-item.dropdown-list-item 
+                        .dropdown-list-item__text Подкатегория первая
+                        input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория первая")
+                    .sidebar-filters__list-item.dropdown-list-item 
+                        .dropdown-list-item__text Подкатегория вторая
+                        input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория вторая")
+                    .sidebar-filters__list-item.dropdown-list-item 
+                        .dropdown-list-item__text Подкатегория третья
+                        input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория третья")
+                    .sidebar-filters__list-item.dropdown-list-item 
+                        .dropdown-list-item__text Подкатегория четвертая
+                        input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория четвертая")
+        .sidebar-filters__item
+            .sidebar-filters__item-content.sidebar-filters__item-switch
+                .sidebar-filters__item-title Показавать только в наличии
+                .sidebar-filters__switch.switch
+                    input.switch-input.sidebar-filters__switch-input(type="checkbox" checked)
+                    .switch-btn.sidebar-filters__switch-btn
+        .sidebar-filters__item.dropdown
+            .sidebar-filters__item-top.dropdown-top
+                .sidebar-filters__list-title.dropdown-title Цена
+                .dropdown-arrow 
+                    +svgMono('arrow-dropdown')
+            .sidebar-filters__list-items.dropdown-list
+                .sidebar-filters__price-range#range
+                .sidebar-filters__price-inputs 
+                    .sidebar-filters__price-min
+                        label(for="") Мин
+                        input(type="number" max="75" min="0") 
+                    .sidebar-filters__price-max
+                        label(for="") Макс
+                        input(type="number" max="75" min="0") 
+        .sidebar-filters__item.dropdown
+            .sidebar-filters__item-top.dropdown-top
+                .sidebar-filters__list-title.dropdown-title Размер
+                .dropdown-arrow 
+                    +svgMono('arrow-dropdown')
+            .sidebar-filters__list-items.dropdown-list
+                .sidebar-filters__radio
+                    input.sidebar-filters__radio-input.radio-input.sidebar-button(type="radio" name="size" checked value="all")
+                    .sidebar-filters__radio-btn.radio-btn
+                    .sidebar-filters__radio-text Все размеры
+                .sidebar-filters__radio
+                    input.sidebar-filters__radio-input.radio-input.sidebar-button(type="radio" name="size" value="15 см")
+                    .sidebar-filters__radio-btn.radio-btn
+                    .sidebar-filters__radio-text 15 см
+                .sidebar-filters__radio
+                    input.sidebar-filters__radio-input.radio-input.sidebar-button(type="radio" name="size" value="20 см")
+                    .sidebar-filters__radio-btn.radio-btn
+                    .sidebar-filters__radio-text 20 см
+                .sidebar-filters__radio
+                    input.sidebar-filters__radio-input.radio-input.sidebar-button(type="radio" name="size" value="75 см")
+                    .sidebar-filters__radio-btn.radio-btn
+                    .sidebar-filters__radio-text 75 см
+        .sidebar-filters__item.dropdown
+            .sidebar-filters__item-top.dropdown-top
+                .sidebar-filters__list-title.dropdown-title Бренды
+                .dropdown-arrow 
+                    +svgMono('arrow-dropdown')
+            .sidebar-filters__list-items.dropdown-list
+                .sidebar-filters__list-item.dropdown-list-item 
+                    .dropdown-list-item__text Подкатегория первая
+                    input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория первая")
+                .sidebar-filters__list-item.dropdown-list-item 
+                    .dropdown-list-item__text Подкатегория вторая
+                    input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория вторая")
+                .sidebar-filters__list-item.dropdown-list-item 
+                    .dropdown-list-item__text Подкатегория третья
+                    input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория третья")
+                .sidebar-filters__list-item.dropdown-list-item 
+                    .dropdown-list-item__text Подкатегория четвертая
+                    input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория четвертая")
+        .sidebar-filters__item.dropdown
+            .sidebar-filters__item-top.dropdown-top
+                .sidebar-filters__list-title.dropdown-title Страны (?)
+                .dropdown-arrow 
+                    +svgMono('arrow-dropdown')
+            .sidebar-filters__list-items.dropdown-list
+                .sidebar-filters__list-item.dropdown-list-item 
+                    .dropdown-list-item__text Подкатегория первая
+                    input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория первая")
+                .sidebar-filters__list-item 
+                    .dropdown-list-item__text Подкатегория вторая
+                    input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория вторая")
+                .sidebar-filters__list-item
+                    .dropdown-list-item__text Подкатегория третья
+                    input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория третья")
+                .sidebar-filters__list-item
+                    .dropdown-list-item__text Подкатегория четвертая
+                    input.sidebar-input.sidebar-button(type="checkbox" value="Подкатегория четвертая")
+    a.sidebar-filters__poster.poster(href="") 
+        .poster__content
+            .poster__title Сезонная распродажа остатков топовой коллекции 
+            .poster__btn.btn.btn--white Адрес на карте
+        +webp(['main-top/1'], 'jpg')
+
+        

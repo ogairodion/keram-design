@@ -1,0 +1,168 @@
+section.cart.cart-individual
+    .l-content
+        .cart__wrapper(data-sticky-container)
+            .cart__content 
+                .catalog-category-card__top.page-top
+                    a.page-top__back.page-top__back--text(href="")    
+                        .page-top__back-icon  
+                            +svgMono('arrow')
+                        .page-top__back-text Вернуться к покупкам
+                .cart__attention.attention
+                    .attention__icon    
+                        +svgMono('car')
+                    .attention__info
+                        .attention__info-title До бесплатной доставки не хвататет 2720 ₽
+                        .attention__info-text Доставка заказа по России суммой до 3000 руб. стоит 800 рублей.
+                .cart__title
+                    .page-top__back-icon  
+                        +svgMono('arrow')
+                    h1.title.title--h4 Ваш заказ
+                    .cart__count 3 товара
+                .table-products.cart__products
+                    .table-product__headers.cart__product.cart__product-headers
+                        .table-product__column.cart__product-column
+                            .table-product__title.cart__product-title Товар
+                        .table-product__column.cart__product-column
+                            .table-product__title.cart__product-title Количество
+                        .table-product__column.cart__product-column
+                            .table-product__title.cart__product-title Цена
+                    .table-product.cart__product(data-id="1")
+                        .table-product__column.cart__product-column
+                            .table-product__img.cart__product-img
+                                +webp([['products/2']], 'jpg', 'lazy')
+                            .table-product__info.cart__product-info
+                                .table-product__info-title.cart__product-title(data-name="Керамогранит BREMEN RIEMCHEN UNGESPALTEN (из 3-х шт) BEIGE 24,5X7") Керамогранит BREMEN RIEMCHEN UNGESPALTEN (из 3-х шт) BEIGE 24,5X7
+                                .cart__product-info-size(data-size="77") Рамер: <span>77 мм</span>
+                        .table-product__column.cart__product-column
+                            .table-product__input.cart__product-input
+                                .table-product__input-control.table-product__input-minus -
+                                input(type="number" value="0" min="0")
+                                .table-product__input-control.table-product__input-plus +
+                        .table-product__column.cart__product-column   
+                            .table-product__price.cart__product-price(data-price="2312")
+                                .table-product__price--result 2 312 ₽
+                                .table-product__price 1 156 ₽ / шт
+                            .table-product__input-delete 
+                                +svgMono('delete')
+                    .table-product.cart__product(data-id="2")
+                        .table-product__column.cart__product-column
+                            .table-product__img.cart__product-img
+                                +webp([['products/2']], 'jpg', 'lazy')
+                            .table-product__info.cart__product-info
+                                .table-product__info-title.cart__product-title(data-name="Керамогранит BREMEN RIEMCHEN UNGESPALTEN (из 3-х шт) BEIGE 24,5X7") Керамогранит BREMEN RIEMCHEN UNGESPALTEN (из 3-х шт) BEIGE 24,5X7
+                                .cart__product-info-size(data-size="77") Рамер: <span>77 мм</span>
+                        .table-product__column.cart__product-column
+                            .table-product__input.cart__product-input
+                                .table-product__input-control.table-product__input-minus -
+                                input(type="number" value="0" min="0")
+                                .table-product__input-control.table-product__input-plus +
+                        .table-product__column.cart__product-column   
+                            .table-product__price.cart__product-price(data-price="2312")
+                                .table-product__price--result 2 312 ₽
+                                .table-product__price 1 156 ₽ / шт
+                            .table-product__input-delete 
+                                +svgMono('delete')
+                .cart__section.cart__delivery
+                    .cart__section-top
+                        .cart__section-icon.cart__section-icon--green
+                            +svgMono('check')
+                        h2.cart__section-title.title.title--h4 Способ доставки
+                    .cart__section-choose
+                        .radio 
+                            input.radio-input(type="radio" name="delivery" checked value="Доставка курьером")
+                            .radio-btn
+                            .radio-info
+                                .radio-title Доставка курьером
+                                .radio-text Доставка курьером до двери
+                            .radio-price 1 200 ₽
+                        .radio 
+                            input.radio-input(type="radio" name="delivery"  value="Самовывоз")
+                            .radio-btn
+                            .radio-info
+                                .radio-title Самовывоз
+                                .radio-text Адрес самовывоза можно посмотреть в разделе «Доставка»
+                            .radio-price Бесплатно
+                        .radio 
+                            input.radio-input(type="radio" name="delivery"  value="Почтой России")
+                            .radio-btn
+                            .radio-info
+                                .radio-title Почтой России
+                            .radio-price Бесплатно
+                .cart__section.cart__address
+                    .cart__section-top
+                        .cart__section-icon.cart__section-icon--brown
+                            +svgMono('x')
+                        h2.cart__section-title.title.title--h4 Адрес доставки и получатель
+                    .cart__section-choose
+                        .radio 
+                            input.radio-input(type="radio" name="client" checked value="Физическое лицо")
+                            .radio-btn
+                            .radio-info
+                                .radio-title Физическое лицо
+                        .radio 
+                            input.radio-input(type="radio" name="client"  value="Юридическое лицо")
+                            .radio-btn
+                            .radio-info
+                                .radio-title Юридическое лицо
+                    .cart__inputs
+                        .cart__input
+                            label Имя
+                            input(type="text" name="name")
+                        .cart__input
+                            label Фамилия
+                            input(type="text" name="secondName")
+                        .cart__input
+                            label Отчество
+                            input(type="text" name="thirddName")
+                    .cart__inputs
+                        .cart__input
+                            label Электронная почта
+                            input(type="email" name="email")
+                        .cart__input
+                            label Контактный телефон
+                            input(type="phone" name="phone")
+                    .cart__inputs
+                        .cart__input
+                            label Почтовый индекс
+                            input(type="number" name="index" maxlength="6") 
+                    .cart__inputs
+                        .cart__input
+                            label Область
+                            input(type="text" name="region") 
+                        .cart__input
+                            label Город
+                            input(type="text" name="city") 
+                    .cart__inputs
+                        .cart__input.cart__input--address
+                            label Адрес
+                            input(type="text" name="address") 
+                    .cart__inputs
+                        .cart__textarea
+                            label Комментарий
+                            textarea(name="comment") 
+                .cart__section.cart__address
+                    .cart__section-top
+                        .cart__section-icon.cart__section-icon--brown
+                            +svgMono('x')
+                        h2.cart__section-title.title.title--h4 Способ оплаты
+                    .cart__payment
+                        .cart__section-choose
+                            .radio 
+                                input.radio-input(type="radio" name="price" checked value="Физическое лицо")
+                                .radio-btn
+                                .radio-info
+                                    .radio-title Наличными курьеру
+                            .radio 
+                                input.radio-input(type="radio" name="price"  value="Юридическое лицо")
+                                .radio-btn
+                                .radio-info
+                                    .radio-title Безопасная онлайн оплата
+                                    .radio-text После нажатия на кнопку «Оплатить» у вас будет возможность выбрать удобный для вас способ оплаты.
+                            .radio 
+                                input.radio-input(type="radio" name="price"  value="Юридическое лицо")
+                                .radio-btn
+                                .radio-info
+                                    .radio-title Безналичная оплата
+                                    .radio-text По счету в банке с закрывающими документами для Юр. лиц
+            .cart__order
+                include ../../components/sidebar/sidebar-cart.pug

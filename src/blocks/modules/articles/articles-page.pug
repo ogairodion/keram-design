@@ -1,0 +1,14 @@
+include articles-data.pug
+include ../../components/article/article.pug
+
+section.articles.articles-page
+    .l-default
+        .profile-content.articles__wrapper
+            include ../../components/sidebar/sidebar.pug
+            .articles__content
+                h1.articles__title.title.title--h4 Полезные статьи
+                .articles__items 
+                    each article in articles
+                        +article(article, 'articles__item', 'lazy')
+                a.articles__btn.btn.btn--black.btn--more(href="") Показать ещё
+

@@ -1,0 +1,30 @@
+mixin collection(collection, className, lazy)
+    a.collection(href=collection.href class=className)
+        - if (collection.status)
+            .status= collection.status
+        - if (collection.icons)
+            .collection__icons
+                //- .collection__icon.collection__icons-graph  
+                //-     +svgMono('graph')
+                //-     .collection__icon-count 10
+                object
+                    a.collection__icon.collection__icons-favorites 
+                        +svgMono('heart')
+                        .collection__icon-count
+        .collection__img
+            source(data-srcset="img/" + collection.img + ".webp" type="image/webp")
+            source(data-srcset="img/" + collection.img + ".jpg" type="image/jpg")
+            img(data-src="img/" + collection.img + ".jpg", alt="" class=lazy)
+        .collection__info
+            .collection__top
+                .collection__name
+                    .collection__title= collection.title
+                    .collection__brand= collection.brand + ' | ' + collection.country
+                .collection__count= collection.count
+                - if (collection.price)
+                    .collection__price!= '<span>от </span>' + collection.price + '&nbsp;<i class="icon-rub"></i> <span>/ м<sup>2</sup></span>'
+            .collection__text= collection.text
+        .collection__btn.btn.btn--black Посмотреть товары в коллекции
+        - if (className == 'favorite-collection catalog-collections__item')
+            object
+                a.collection__btn.btn.btn--fav(href="") Убрать из избранного

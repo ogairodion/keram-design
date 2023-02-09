@@ -1,0 +1,48 @@
+-
+    const sidebar_menu_about = [
+        {
+            href: "",
+            icon: "menu",
+            text: "О компании",
+            class: "active"
+        },
+        {
+            href: "",
+            icon: "doc",
+            text: "Гарантия и сервис"
+        },
+        {
+            href: "",
+            icon: "history",
+            text: "Доставка"
+        },
+        {
+            href: "",
+            icon: "settings",
+            text: "Оплата"
+        },
+        {
+            href: "",
+            icon: "settings",
+            text: "Оптовикам"
+        },
+        {
+            href: "",
+            icon: "settings",
+            text: "Контакты",
+            class: ""
+        },
+        {
+            href: "",
+            icon: "settings",
+            text: "Полезные статьи",
+            class: ""
+        }
+    ]
+
+.sidebar
+    each sidebar_item in sidebar_menu_about
+        a.sidebar__item(href=sidebar_item.href class=sidebar_item.class)
+            .sidebar__item-icon
+                +svgMono(sidebar_item.icon)
+            .sidebar__item-text= sidebar_item.text

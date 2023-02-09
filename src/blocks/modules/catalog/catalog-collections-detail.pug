@@ -1,0 +1,58 @@
+include catalog-data.pug
+include ../../components/collection/collection.pug
+
+section.catalog-collections-detail
+    .l-content 
+        .catalog-collections-detail__wrapper
+            .catalog-collections-detail__top.page-top
+                a.page-top__back.page-top__back--text(href="")    
+                    .page-top__back-icon  
+                        +svgMono('arrow')
+                    .page-top__back-text Все коллекции
+                .page-top__info
+            .catalog-collections-detail__content
+                .catalog-collections-detail__sliders
+                    .catalog-collections-detail__slider.catalog-collections-detail__slider-main.swiper-container
+                        .swiper-wrapper
+                            each slide_main in catalog_slider_detail
+                                a.swiper-slide(href="" data-fancybox="gallery" data-src="img/" + slide_main.img + ".jpg") 
+                                    .swiper-slide__wrapper
+                                    +webp([slide_main.img], 'jpg', 'swiper-lazy')
+                        .slider-arrows
+                            .slider-arrow.slider-arrow-prev
+                                +svgMono('arrow-slider')
+                            .slider-arrow.slider-arrow-next
+                                +svgMono('arrow-slider')
+                    .catalog-collections-detail__slider.catalog-collections-detail__slider-thumbs.swiper-container
+                        .swiper-wrapper
+                            each slide_thumbs in catalog_slider_detail
+                                .swiper-slide
+                                    +webp([slide_thumbs.img], 'jpg', 'swiper-lazy')
+                .catalog-collections-detail__info 
+                    .catalog-collections-detail__info-content  
+                        h1.catalog-collections-detail__title.title.title--h4 Коллекция Fiori
+                        .catalog-collections-detail__info-top
+                            .catalog-collections-detail__country Страна: <span>Испания</span>
+                            .catalog-collections-detail__brand
+                                .catalog-collections-detail__brand-text Бренд
+                                .catalog-collections-detail__brand-icon
+                                    img.lazy(data-src="img/svg/brands/xlight.svg", alt="")
+                    .catalog-collections-detail__text 
+                        p Впечатляющий мрамор теплого оттенка графита, с нежными белыми прожилками и разводами, которые делают акцент на глубине серого цвета Белое тело керамогранита позволяет подсвечивать материал изнутри, создавая тем самым уникальные и интересные дизайны интерьра
+                        p тело керамогранита позволяет подсвечивать материал изнутри, создавая тем самым уникальные и интересные дизайны интерьра Впечатляющий мрамор теплого оттенка графита, с нежными белыми прожилками и разводами, которые делают акцент на глубине серого цвета Белое Впечатляющий мрамор теплого оттенка графита, с нежными белыми прожилками и разводами, которые делают акцент на глубине серого цвета Белое 
+                        p С нежными белыми прожилками и разводами, которые делают акцент на глубине серого цвета Белое тело керамогранита позволяет подсвечивать материал изнутри, создавая тем самым уникальные и интересные дизайны интерьра
+                    .catalog-collections-detail__bottom
+                        .catalog-collections-detail__share
+                            .catalog-collections-detail__share-text Поделиться
+                            .catalog-collections-detail__share-icons
+                                a.catalog-collections-detail__share-icon(href="") 
+                                    +svgMono('facebook-share')
+                                a.catalog-collections-detail__share-icon(href="") 
+                                    +svgMono('google-share')
+                                a.catalog-collections-detail__share-icon(href="") 
+                                    +svgMono('twitter-share')
+                        a.catalog-collections-detail__favorites(href="") 
+                            .catalog-collections-detail__favorites-text В избранное
+                            .catalog-collections-detail__favorites-icon
+                                +svgMono('heart')
+                    

@@ -1,0 +1,9 @@
+mixin sale(sale, className, lazy)
+    a.sale(href=sale.href class=className)
+        .sale__img
+            source(data-srcset="img/" + sale.img + ".webp" type="image/webp")
+            source(data-srcset="img/" + sale.img + ".jpg" type="image/jpg")
+            img(data-src="img/" + sale.img + ".jpg", alt="" class=lazy)
+        .sale__info
+            .sale__title= sale.title
+            .sale__btn.btn.btn--white= sale.btn

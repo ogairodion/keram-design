@@ -1,0 +1,20 @@
+extends ../layouts/default
+include ../helpers/_mixins-default
+include ../helpers/_mixins-custom
+
+block variables
+  - const title = "Шаблон каталог (main)"
+
+block content
+  .shadow.hidden
+  include ../../blocks/modules/header/header.pug
+  include ../../blocks/modules/catalog-menu/catalog-menu.pug
+  main.main.catalog
+    include ../../blocks/modules/catalog/catalog-main.pug
+    include ../../blocks/modules/brands/brands.pug
+    include ../../blocks/modules/message/message.pug
+  include ../../blocks/modules/footer/footer.pug
+
+block scripts
+  script(defer src="./js/vendor.js")
+  script(defer src="./js/main.js")

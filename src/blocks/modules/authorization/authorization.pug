@@ -1,0 +1,31 @@
+section.authorization
+    .l-default
+        form.form.authorization__form
+            .form__title Вход
+            .form__inputs
+                .form__input
+                    //- .form__input-icon 
+                    //-     +svgMono('user-icon')
+                    input(type="email" placeholder="email")
+                .form__input
+                    //- .form__input-icon 
+                    //-     +svgMono('unlock')
+                    input(type="password" placeholder="Пароль")
+            //- .form__remember
+            //-     //- .form__checkbox.checkbox
+            //-     //-     input.checkbox__input(type="checkbox" checked)
+            //-     //-     .checkbox__btn
+            //-     //-     .checkbox__text Запомнить меня
+            //-     a.form__remember-link(href="") Восстановить пароль 
+            .form__submit
+                button.btn.btn--black(type="submit") Войти
+            .form__services
+                .form__services-title Авторизация через сервисы
+                .form__services-items
+                    a.form__service(href="") 
+                        +svgMono('facebook-service')
+                    a.form__service(href="")
+                        +svgMono('google-service') 
+                    a.form__service(href="")
+                        img(src="img/svg/vk.svg", alt="")
+            .form__registration Нету аккаунта? <a href="">Зарегистрируйтесь</a>

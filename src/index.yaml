@@ -1,0 +1,45 @@
+ProjectTitle: ProjectName
+
+PageList:
+  - file: homepage.html
+    ready: 100
+  - file: empty.html
+    ready: 100
+  - file: sales.html
+    ready: 100
+  - file: brands.html
+    ready: 100
+  - file: brands-detail.html
+    ready: 100
+  - file: catalog-main.html
+    ready: 100
+  - file: catalog-collections.html
+    ready: 100
+  - file: catalog-collections-detail.html
+    ready: 100
+  - file: catalog-category-card-ver1.html
+    ready: 100
+  - file: catalog-detail-description.html
+    ready: 100
+  - file: cart.html
+    ready: 100
+  - file: cart-message.html
+    ready: 100
+  - file: favorites.html
+    ready: 100
+  - file: compare.html
+    ready: 100
+  - file: orders.html
+    ready: 100
+  - file: about.html
+    ready: 100
+  - file: contacts.html
+    ready: 100
+  - file: articles.html
+    ready: 100
+  - file: articles-detail.html
+    ready: 100
+  - file: settings.html
+    ready: 100
+  - file: authorization.html
+    ready: 100

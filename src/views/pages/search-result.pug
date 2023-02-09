@@ -1,0 +1,20 @@
+extends ../layouts/default
+include ../helpers/_mixins-default
+include ../helpers/_mixins-custom
+
+block variables
+  - const title = "Шаблон результат поиска"
+
+block content
+  .shadow.hidden
+  include ../../blocks/modules/header/header.pug
+  include ../../blocks/modules/catalog-menu/catalog-menu.pug
+  main.main
+    include ../../blocks/modules/search-result/search-result.pug
+    include ../../blocks/modules/search-result/search-result-collections.pug
+    include ../../blocks/modules/search-result/search-result-products.pug
+  include ../../blocks/modules/footer/footer.pug
+
+block scripts
+  script(defer src="./js/vendor.js")
+  script(defer src="./js/main.js")

@@ -1,0 +1,24 @@
+include brands-data.pug
+include ../../components/collection/collection.pug
+
+section.brands.brands-detail    
+    .l-content
+        a.breadcrumbs(href="") 
+            .breadcrumbs-icon
+                +svgMono('arrow')
+            .breadcrumbs-text Все производители керамической плитки
+        .brands-detail__wrapper 
+            .brands-detail__logo
+                img.lazy(data-src="img/svg/brands/xlight.svg", alt="")
+            .brands-detail__info
+                .page-top
+                    a.page-top__back(href="")      
+                        +svgMono('arrow')
+                    h1.brands-detail__title.title.title--h4 XLIGHT Сверхтонкая керамическая плитка
+                .brands-detail__description Размер XL и минимальная толщина — вот основные характеристики нового керамогранита Urbatek. Появление плитки XLIGHT ознаменовало собой еще один шаг в естественной эволюции керамики. Она обладает выдающимися физическими и механическими свойствами, которые делают ее поистине уникальной. Это крупный формат (плитки размером 300x100 см), минимальная толщина (3,5 мм), повышенная легкость (8 кг/м²) и меньшая водопоглощаемость, чем у традиционной плитки для облицовки стен (Керамогранит. Группа BIa).
+        .brands-detail__items
+            h2.brands-detail__items-title.title.title--h2 Коллекции плитки бренда X LIGHT
+            .brands-detail__items-content
+                each brand_detail in brand_details
+                    a.brands-detail__item(href="")
+                        +collection(brand_detail, '','lazy') 
